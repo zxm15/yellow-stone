@@ -12,7 +12,7 @@ class Company extends Model
     protected $table = 'company';
     /**
      * The primary key of the table
-     * 
+     *
      * @var string
      */
     protected $primaryKey = 'company_id';
