@@ -3,7 +3,8 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
+use Request;
+use App\Company;
 
 class CompanyController extends Controller
 {
@@ -15,7 +16,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -35,7 +36,10 @@ class CompanyController extends Controller
      */
     public function store()
     {
-        //
+        $input = Request::all();
+        Company::create($input);
+
+        redirect('company');
     }
 
     /**
