@@ -63,7 +63,8 @@ class CompanyController extends Controller
      */
     public function edit($id)
     {
-        //
+        $company = Company::findorFail($id);
+        return view('company.edit', compact($company));
     }
 
     /**
