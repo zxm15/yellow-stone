@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Edit {{$company->name}} info</h1>
-    {!! Form::open(['url' => 'company']) !!}
+    {!! Form::model($company, ['method' => 'PATCH', 'action' => ['CompanyController@update', $company->id]]) !!}
         @include('company._form', ['submitButton' => 'Update Article'])
 
     {!! Form::close() !!}
