@@ -40,7 +40,7 @@ class CompanyController extends Controller
         $input = Request::all();
         Company::create($input);
 
-        redirect('company');
+        return redirect('company');
     }
 
     /**
