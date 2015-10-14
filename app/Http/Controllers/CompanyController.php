@@ -63,7 +63,7 @@ class CompanyController extends Controller
      */
     public function edit($id)
     {
-        $company = Company::findorFail($id);
+        $company = Company::findOrFail($id);
         return view('company.edit', compact('company'));
     }
 
@@ -75,7 +75,10 @@ class CompanyController extends Controller
      */
     public function update($id)
     {
-        //
+        $company = Company::findOrFail($id);
+        $input = Request::all();
+        $company->update($input);
+        return redirect('company');
     }
 
     /**

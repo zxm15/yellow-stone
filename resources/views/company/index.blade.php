@@ -5,7 +5,7 @@
     @if(! empty($companies))
         <ul>
             @foreach($companies as $company)
-                <li><a href="{{url('/company', $company->id)}}">{{$company->name}}</a></li>
+                <li><a href="{{url('/company', $company->company_id)}}">{{$company->name}}</a></li>
             @endforeach
         </ul>
     @endif
