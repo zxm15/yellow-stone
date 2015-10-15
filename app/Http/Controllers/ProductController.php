@@ -3,7 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Product;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
 
 class ProductController extends Controller {
 
@@ -25,7 +25,7 @@ class ProductController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('product.create');
 	}
 
 	/**
@@ -35,7 +35,9 @@ class ProductController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		$input = Request::all();
+		Product::create($input);
+		return redirect('product');
 	}
 
 	/**
