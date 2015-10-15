@@ -17,6 +17,8 @@ Route::get('home', 'HomeController@index');
 
 Route::resource('company', 'CompanyController');
 
+Route::resource('product', 'ProductController');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
