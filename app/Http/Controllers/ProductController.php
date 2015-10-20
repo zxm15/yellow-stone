@@ -73,7 +73,10 @@ class ProductController extends Controller {
 	 */
 	public function update($id)
 	{
-		//
+		$product = Product::findOrFail($id);
+		$input = Request::all();
+		$product->update($input);
+		return redirect('product/'.$id);
 	}
 
 	/**
