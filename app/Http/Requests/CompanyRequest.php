@@ -23,10 +23,10 @@ class CompanyRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'required|max:255',
             'website' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required|numeric|min:10',
             'address1' => 'required',
             'address2' => 'required',
             'city' => 'required',
