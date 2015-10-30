@@ -6,7 +6,12 @@ use App\Product;
 use Illuminate\Support\Facades\Request;
 
 class ProductController extends Controller {
-
+	/**
+	 * Added middleware
+	 */
+	public function __construct() {
+		$this->middleware('auth');
+	}
 	/**
 	 * Display a listing of the resource.
 	 *

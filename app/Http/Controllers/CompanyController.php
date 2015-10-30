@@ -6,6 +6,12 @@ use App\Company;
 
 class CompanyController extends Controller
 {
+    /**
+     * Added middleware
+     */
+    public function __construct() {
+        $this->middleware('auth');
+    }
 
     /**
      * Display a listing of the resource.
