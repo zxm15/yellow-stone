@@ -1,9 +1,7 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
+use App\Http\Requests\CompanyRequest;
 use App\Http\Controllers\Controller;
-
-use Request;
 use App\Company;
 
 class CompanyController extends Controller
@@ -35,9 +33,9 @@ class CompanyController extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(CompanyRequest $request)
     {
-        $input = Request::all();
+        $input = $request->all();
         Company::create($input);
 
         return redirect('company');
@@ -73,10 +71,10 @@ class CompanyController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function update($id)
+    public function update(CompanyRequest $request, $id)
     {
         $company = Company::findOrFail($id);
-        $input = Request::all();
+        $input = $request->all();
         $company->update($input);
         return redirect('company');
     }
