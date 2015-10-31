@@ -53,7 +53,7 @@
 			</div>
 		</div>
 	</nav>
-	<div class="row test center-block content" >
+	<div class="container" >
 		@yield('content')
 	</div>
 
