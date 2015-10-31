@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Laravel</title>
+		<title>OrderEZ</title>
 		
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
@@ -29,18 +29,22 @@
 
 			.title {
 				font-size: 96px;
+				font-weight: bold;
 				margin-bottom: 40px;
+				color: darkgoldenrod;
 			}
 
 			.quote {
 				font-size: 24px;
+				font-weight: bold;
+				color: darkslategrey;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Laravel 5</div>
+				<div class="title">OrderEZ</div>
 				<div class="quote">{{ Inspiring::quote() }}</div>
 			</div>
 		</div>
