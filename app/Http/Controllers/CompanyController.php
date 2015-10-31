@@ -9,7 +9,8 @@ class CompanyController extends Controller
     /**
      * Added middleware
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('auth');
     }
 
@@ -83,6 +84,18 @@ class CompanyController extends Controller
         $input = $request->all();
         $company->update($input);
         return redirect('company');
+    }
+
+    /**
+     * Show the form for deleting the specified resource
+     *
+     * @param $id
+     * @return Response
+     */
+    public function delete($id)
+    {
+        $company = Company::findOrFail($id);
+        return view('company.delete', compact('company'));
     }
 
     /**

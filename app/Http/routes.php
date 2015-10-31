@@ -17,6 +17,8 @@ Route::get('home', 'HomeController@index');
 
 Route::resource('company', 'CompanyController');
 
+Route::get('company/{id}/delete', 'CompanyController@delete');
+
 Route::resource('product', 'ProductController');
 
 Route::controllers([
