@@ -1,6 +1,7 @@
 @extends('app')
 
 @section('crud')
+    <li><a href="{{ url('company') }}">Company</a></li>
     <li><a href="{{ url('company/'.$company->company_id.'/edit') }}">Edit</a></li>
     <li><a href="{{ action('CompanyController@delete', ['id' => $company->company_id]) }}">Delete</a></li>
 @endsection

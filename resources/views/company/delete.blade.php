@@ -1,5 +1,7 @@
 @extends('app')
-
+@section('crud')
+    <li><a href="{{ url('company') }}">Company</a></li>
+@endsection
 @section('content')
     <div class="row">
         <div class="col-xs-12 text-center">
