@@ -17,9 +17,14 @@ body {
 }
 .information-table {
   vertical-align: middle;
-}
-.information-table td {
   font-size: large;
+
+}
+.information-table td.table-key {
+  color: cornflowerblue;
+}
+.information-table td.table-value {
+  color: forestgreen;
 }
 
 /****************************end**********************/

@@ -20,6 +20,7 @@
 	<![endif]-->
 </head>
 <body>
+
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -54,6 +55,8 @@
 			</div>
 		</div>
 	</nav>
+
+	@yield('background')
 	<div class="container extended-content" >
 		@yield('content')
 	</div>

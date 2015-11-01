@@ -6,17 +6,17 @@
     <li><a href="{{ action('ProductController@delete', ['id' => $product->product_id]) }}">Delete</a></li>
 @endsection
 @section('content')
-    <div class="row">
-        <div class="col-md-12 text-center">
+    <div class="row col-md-8 col-md-offset-2">
+        <div class="text-center">
             <h1>{{$product->name}} detailed info</h1>
         </div>
-        <table class="table, table-striped information-table">
+        <table class="table table-striped information-table">
             <tbody>
             @foreach($product['attributes'] as $key => $value)
                 @unless(strcmp($key,"created_at") == 0 || strcmp($key, "updated_at") == 0)
                     <tr>
-                        <th>{{$key}}</th>
-                        <th>{{$value}}</th>
+                        <td class="col-xs-4 table-key">{{$key}}</td>
+                        <td class="table-value">{{$value}}</td>
                     </tr>
                 @endunless
             @endforeach
