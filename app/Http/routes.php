@@ -21,6 +21,8 @@ Route::get('company/{id}/delete', 'CompanyController@delete');
 
 Route::resource('product', 'ProductController');
 
+Route::get('product/{id}/delete', 'ProductController@delete');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
