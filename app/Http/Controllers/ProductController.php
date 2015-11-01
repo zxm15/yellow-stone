@@ -1,9 +1,9 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
+use App\Http\Requests\ProductRequest;
 use App\Http\Controllers\Controller;
 use App\Product;
-use Illuminate\Support\Facades\Request;
+
 
 class ProductController extends Controller {
 	/**
@@ -38,9 +38,10 @@ class ProductController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(ProductRequest $request)
 	{
-		$input = Request::all();
+
+		$input = $request->all();
 		Product::create($input);
 		return redirect('product');
 	}
@@ -76,10 +77,10 @@ class ProductController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(ProductRequest $request, $id)
 	{
 		$product = Product::findOrFail($id);
-		$input = Request::all();
+		$input = $request->all();
 		$product->update($input);
 		return redirect('product/'.$id);
 	}
