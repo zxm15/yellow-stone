@@ -22,7 +22,7 @@ class ProductRequest extends Request {
 	public function rules()
 	{
 		return [
-			'company_name' => 'required',
+			'company_id' => 'required',
 			'name' => 'required',
 			'category' => 'required'
 		];
