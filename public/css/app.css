@@ -15,7 +15,12 @@ body {
 .form-group {
   color: cornflowerblue;
 }
-
+.information-table {
+  vertical-align: middle;
+}
+.information-table td {
+  font-size: large;
+}
 
 /****************************end**********************/
 article,
