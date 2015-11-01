@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row text-center">
-        <h1 style="color:darkgoldenrod">List of companies</h1>
+        <h1>List of companies</h1>
         @if(! empty($companies))
 
             @foreach($companies as $company)

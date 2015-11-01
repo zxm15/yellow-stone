@@ -12,20 +12,20 @@
             width: 100%;
             height: 100%;
             color: #B0BEC5;
-            display: table;
             font-weight: 100;
             font-family: 'Lato';
         }
 
         .container {
             text-align: center;
-            display: table-cell;
-            vertical-align: middle;
+            height: 100%;
+            display: table;
         }
 
         .content {
             text-align: center;
-            display: inline-block;
+            vertical-align: middle;
+            display: table-cell;
         }
 
         .title {
@@ -40,15 +40,21 @@
             font-weight: bold;
             color: cornflowerblue;
         }
+
+        .navbar {
+            width: 100%;
+            position: fixed;
+            top: 0px;
+        }
     </style>
 </head>
 <body>
-<div class="container-fluid">
+
 <nav class="navbar navbar-default">
 
+    <div class="container-fluid">
 
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="my-login">
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ url('/auth/login') }}">Login</a></li>
@@ -56,10 +62,11 @@
 
             </ul>
         </div>
-
+    </div>
 </nav>
-</div>
+
 <div class="container">
+
     <div class="content">
         <div class="title">OrderEZ</div>
         <div class="quote">{{ Inspiring::quote() }}</div>

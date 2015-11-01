@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 /****************************gavin********************/
+.extended-content h1{
+  color: goldenrod;
+  text-align: center;
+}
 .form-group {
   color: cornflowerblue;
 }
