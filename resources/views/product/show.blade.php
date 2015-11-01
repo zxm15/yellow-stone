@@ -7,21 +7,9 @@
 @endsection
 @section('content')
     <div class="row col-md-8 col-md-offset-2">
-        <div class="text-center">
-            <h1>{{$product->name}} detailed info</h1>
-        </div>
-        <table class="table table-striped information-table">
-            <tbody>
-            @foreach($product['attributes'] as $key => $value)
-                @unless(strcmp($key,"created_at") == 0 || strcmp($key, "updated_at") == 0)
-                    <tr>
-                        <td class="col-xs-4 table-key">{{$key}}</td>
-                        <td class="table-value">{{$value}}</td>
-                    </tr>
-                @endunless
-            @endforeach
-            </tbody>
 
-        </table>
+        <h1>{{$product->name}} detailed info</h1>
+
+        @include('information-table', ['entity' => $product])
     </div>
 @endsection
