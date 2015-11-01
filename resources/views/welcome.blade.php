@@ -31,17 +31,18 @@
 				font-size: 96px;
 				font-weight: bold;
 				margin-bottom: 40px;
-				color: darkgoldenrod;
+				color: goldenrod;
 			}
 
 			.quote {
 				font-size: 24px;
 				font-weight: bold;
-				color: darkslategrey;
+				color: cornflowerblue;
 			}
 		</style>
 	</head>
 	<body>
+
 		<div class="container">
 			<div class="content">
 				<div class="title">OrderEZ</div>
