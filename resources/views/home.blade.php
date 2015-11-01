@@ -1,7 +1,7 @@
 @extends('app')
 @section('crud')
     <li><a href="{{ url('company') }}">Company</a></li>
-    <li><a href="{{ url('product') }}">Product</a></li>
+    <li><a href="{{ url('product') }}">Brand</a></li>
 @endsection
 @section('background')
         <div id="myCarousel" class="carousel slide" data-ride="carousel">

@@ -21,10 +21,10 @@ body {
 
 }
 .information-table td.table-key {
-  color: lightslategrey;
+  color: cornflowerblue;
 }
 .information-table td.table-value {
-  color: cornflowerblue;
+  color: #333333;
 }
 
 /****************************end**********************/
