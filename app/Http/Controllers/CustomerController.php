@@ -5,7 +5,13 @@ use App\Http\Controllers\Controller;
 use App\Customer;
 
 class CustomerController extends Controller {
-
+	/**
+	 * Added middleware
+	 */
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
 
 	/**
 	 * Display a listing of the resource.
