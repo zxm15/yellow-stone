@@ -23,6 +23,10 @@ Route::resource('product', 'ProductController');
 
 Route::get('product/{id}/delete', 'ProductController@delete');
 
+Route::resource('customer', 'CustomerController');
+
+Route::get('customer/{id}/delete', 'CustomerController@delete');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
