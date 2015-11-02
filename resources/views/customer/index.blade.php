@@ -10,7 +10,7 @@
 
             @foreach($customers as $customer)
                 <div class="col-xs-12">
-                    <a href="{{url('/customer', $customer->customer_id)}}"><h2>{{$customer->name}}</h2></a>
+                    <a href="{{url('/customer', $customer->customer_id)}}"><h2>{{$customer->first_name.' '.$customer->last_name}}</h2></a>
                 </div>
 
             @endforeach

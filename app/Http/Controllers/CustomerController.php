@@ -1,11 +1,11 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
+use App\Http\Requests\CustomerRequest;
 use App\Http\Controllers\Controller;
 use App\Customer;
-use Illuminate\Http\Request;
 
 class CustomerController extends Controller {
+
 
 	/**
 	 * Display a listing of the resource.
@@ -15,7 +15,7 @@ class CustomerController extends Controller {
 	public function index()
 	{
 		$customers = Customer::all();
-		return view(customer.index, compact('customers'));
+		return view('customer.index', compact('customers'));
 	}
 
 	/**
@@ -25,7 +25,7 @@ class CustomerController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('customer.create');
 	}
 
 	/**
@@ -33,9 +33,11 @@ class CustomerController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CustomerRequest $request)
 	{
-		//
+		$input = $request->all();
+		Customer::create($input);
+		return redirect('customer');
 	}
 
 	/**
