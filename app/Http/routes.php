@@ -23,9 +23,25 @@ Route::resource('product', 'ProductController');
 
 Route::get('product/{id}/delete', 'ProductController@delete');
 
+Route::resource('campaign', 'CampaignController');
+
+Route::get('campaign/{id}/delete', 'CampaignController@delete');
+
 Route::resource('customer', 'CustomerController');
 
 Route::get('customer/{id}/delete', 'CustomerController@delete');
+
+Route::resource('media', 'MediaController');
+
+Route::get('media/{id}/delete', 'MediaController@delete');
+
+Route::resource('promotion', 'PromotionController');
+
+Route::get('promotion/{id}/delete', 'PromotionController@delete');
+
+Route::resource('order', 'OrderController');
+
+Route::get('order/{id}/delete', 'OrderController@delete');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

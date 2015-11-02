@@ -2,7 +2,11 @@
 @section('crud')
     <li><a href="{{ url('company') }}">Company</a></li>
     <li><a href="{{ url('product') }}">Brand</a></li>
+    <li><a href="{{ url('campaign') }}">Campaign</a></li>
     <li><a href="{{ url('customer') }}">Customer</a></li>
+    <li><a href="{{ url('media') }}">Media</a></li>
+    <li><a href="{{ url('promotion') }}">Promotion</a></li>
+    <li><a href="{{ url('order') }}">Sale</a></li>
 @endsection
 @section('background')
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
