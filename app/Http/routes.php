@@ -23,6 +23,10 @@ Route::resource('product', 'ProductController');
 
 Route::get('product/{id}/delete', 'ProductController@delete');
 
+Route::resource('product-option', 'ProductOptionController');
+
+Route::get('product-option/{id}/delete', 'ProductOptionController@delete');
+
 Route::resource('campaign', 'CampaignController');
 
 Route::get('campaign/{id}/delete', 'CampaignController@delete');

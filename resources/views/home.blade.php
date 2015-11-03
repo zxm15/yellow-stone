@@ -2,6 +2,7 @@
 @section('crud')
     <li><a href="{{ url('company') }}">Company</a></li>
     <li><a href="{{ url('product') }}">Product</a></li>
+    <li><a href="{{ url('product-option') }}">Product Options</a></li>
     <li><a href="{{ url('campaign') }}">Campaign</a></li>
     <li><a href="{{ url('customer') }}">Customer</a></li>
     <li><a href="{{ url('media') }}">Media</a></li>
