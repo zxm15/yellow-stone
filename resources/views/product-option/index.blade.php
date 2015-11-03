@@ -10,7 +10,7 @@
 
             @foreach($productOptions as $productOption)
                 <div class="col-xs-12">
-                    <a href="{{url('/company', $productOption->company_id)}}"><h2>{{$productOption->name}}</h2></a>
+                    <a href="{{url('/product-option', $productOption->product_options_id)}}"><h2>{{$productOption->name}}</h2></a>
                 </div>
 
             @endforeach

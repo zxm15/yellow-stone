@@ -1,9 +1,7 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
+use App\Http\Requests\ProductOptionRequest;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
 use App\ProductOption;
 class ProductOptionController extends Controller {
 	/**
@@ -39,9 +37,12 @@ class ProductOptionController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(ProductOptionRequest $request)
 	{
-		//
+		$input = $request->all();
+		ProductOption::create($input);
+
+		return redirect('product-option');
 	}
 
 	/**
