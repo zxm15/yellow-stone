@@ -31,7 +31,7 @@ class ProductOptionController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('product-option.create');
 	}
 
 	/**
