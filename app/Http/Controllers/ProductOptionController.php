@@ -53,7 +53,8 @@ class ProductOptionController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$productOption = ProductOption::findOrFail($id);
+		return view('product-option.show', compact('productOption'));
 	}
 
 	/**
