@@ -4,7 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-
+use App\ProductOption;
 class ProductOptionController extends Controller {
 	/**
 	 * Register the auth middleware
@@ -20,7 +20,8 @@ class ProductOptionController extends Controller {
 	 */
 	public function index()
 	{
-
+		$productOptions = ProductOption::all();
+		return view('product-option.index', compact('productOptions'));
 	}
 
 	/**
