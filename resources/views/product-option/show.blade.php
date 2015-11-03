@@ -1,9 +1,9 @@
 @extends('app')
 
 @section('crud')
-    <li><a href="{{ url('product-Option') }}">Product Option</a></li>
-    <li><a href="{{ url('product-Option/'.$productOption->product_option_id.'/edit') }}">Edit</a></li>
-    <li><a href="{{ action('ProductOptionController@delete', ['id' => $productOption->product_option_id]) }}">Delete</a></li>
+    <li><a href="{{ url('product-option') }}">Product Option</a></li>
+    <li><a href="{{ url('product-option/'.$productOption->product_options_id.'/edit') }}">Edit</a></li>
+    <li><a href="{{ action('ProductOptionController@delete', ['id' => $productOption->product_options_id]) }}">Delete</a></li>
 @endsection
 @section('content')
 
