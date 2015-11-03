@@ -20,7 +20,7 @@ class ProductOptionController extends Controller {
 	 */
 	public function index()
 	{
-		//
+
 	}
 
 	/**
