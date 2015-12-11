@@ -75,9 +75,13 @@ class ProductOptionController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(ProductOptionRequest $request, $id)
 	{
-		//
+		dd($request);
+		$productOption = ProductOption::findOrFail($id);
+		$input = $request->all();
+		$productOption->update($input);
+		return redirect('product-option');
 	}
 
 	/**

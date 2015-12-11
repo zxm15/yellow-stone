@@ -9,7 +9,7 @@
             <h1 style="color:darkgoldenrod">Edit {{$productOption->name}} information</h1>
         </div>
 
-        {!! Form::model($productOption, ['method' => 'PATCH', 'url' => 'product-option/'.$productOption->product_option_id]) !!}
+        {!! Form::model($productOption, ['method' => 'PATCH', 'url' => 'product-option/'.$productOption->product_options_id]) !!}
         @include('product-option._form', ['submitButtonText' => 'Update product option'])
 
         {!! Form::close() !!}
